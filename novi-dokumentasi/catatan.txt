@@ -1,0 +1,45 @@
+tokobuku
+1. pembeli buku
+2. produk buku
+BACKEND
+node js versi LTS
+nodemon -g
+express
+body parse 
+cors
+mysql
+FRONTEND
+react js
+react native
+npm i -g nodemon
+nodemon -v
+cara buat backend
+1. buat folder
+2. buka folder di vscode klik kanan
+3. npm init -y
+4. package json
+5. npm i express body-parser mysql cors
+DATABASE 
+1. PEMBELI BUKU ( BUYER )
+a. id : int
+b. nomor_anggota : string
+c. nama : string
+d. username : string
+e. password : string
+role : string
+f. created_by : tanggal
+g. updated : tanggal
+2. PRODUK BUKU ( PRODUK )
+a. id : int
+b. nomor_produk : string
+c. judul_buku : string
+d. halaman : string
+e. genre : string
+f. tahun_terbit : string
+g. pengarang : string
+h. isbn : string
+i. harga : int
+j. diskon : 
+k. created : tanggal
+l. updated : tanggal
+

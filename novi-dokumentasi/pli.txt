@@ -1,0 +1,81 @@
+toko buku ada pembeli ada produk buku 
+ 
+kita mulai mengerjakan dari backend  
+ mulai dari instal nodemon  
+-> npm i -g nodemon  
+-> nodemon -v 
+ 
+1. nyalakan XAMPP 
+2. masuk ke dalam phpmyadmin 
+3. buat databes namatoko_db 
+4. atur privileges untuk membuat user 
+5. buat use acount baru 
+5. buat nama user : airinfill 
+         password :kasualitas123 
+6. membuat table lalu membuat tabel sesuai keperluan  
+ 
+TABEL DATABASES 
+=============== 
+1.  nama tabel : user 
+ query    : 
+      -id int no null auto_increment primary key 
+      -username varchar(225) not null 
+      -email varchar(225) not null 
+      -password varchar(225) not null 
+      -nama varchar(225) 
+      -role varchar(225) 
+      -created_ad TIMESTAMP 
+      -updated_at TIMESTAMP 
+ 
+2. book/collection/koleksi buku 
+ nama tabel : book 
+ query    : 
+      -book_id int no null auto_increment primary key 
+      -book_label varchar(225) not null 
+      -book_title varchar(225) not null 
+      -book_autor varchar(225) not null 
+      -book_gendre varchar(225) 
+      -book_publisher varchar(225) 
+      -book_isbn varchar(225) 
+      -book_year varchar(225) 
+      -book_price varchar(225) 
+      -book_stock varchar(225) 
+      -created_at TIMESTAMP 
+      -update_at TIMESTAMP 
+  
+ 
+CARA BUAT BACKEND 
+1. masuk ke folder airin-book dan buka di terimal gitbash 
+2.  
+ 
+ 
+cara menginstal backend 
+-> buat folder 
+-> buka vcd 
+-> buka terminal(gitbash) 
+-> npm -yv -> hasilnya package json 
+-> npm i express body-parser mysql cosr 
+ 
+DATABASE... 
+1. PEMBELI BUKU 
+> id -> integer 
+> nomor_anggota -> string 
+> nama -> string 
+> username -> string 
+> password -> string 
+> created_by -> tanggal 
+> update -> tanggal 
+ 
+2. PRODUK BUKU(nama tabel, produk) 
+> id -> integer 
+> nomor_produk ->string 
+> halaman -> string 
+> judul buku -> string 
+> gendre -> string 
+> tahun_terbit -> string 
+> penulis -> string 
+> harga -> 
+> isbn -> 
+> diskon -> 
+> created -> 
+> update ->
