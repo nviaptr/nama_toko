@@ -53,8 +53,8 @@ cara menginstal backend
 -> buat folder 
 -> buka vcd 
 -> buka terminal(gitbash) 
--> npm -yv -> hasilnya package json 
--> npm i express body-parser mysql cosr 
+-> npm init -> package.json 
+-> npm i express body-parser mysql cors 
  
 DATABASE... 
 1. PEMBELI BUKU 
