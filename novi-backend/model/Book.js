@@ -27,14 +27,70 @@ class Book {
         let sqlQuery = `SELECT * FROM book`;
         sql.query(sqlQuery, (err, res) => {
             if(err) {
-                console.log('This is err => /n', err);
+                console.log('This is Err => /n', err);
                 result(err, null);
             } else {
-                console.log('result, res');
-                result(null, res);
+                let rawData = res;
+                let books = [];
+                let book;
+                rawData.forEach(eachData => {
+                    book = new Book(
+                        eachData.book_id, 
+                        eachData.book_label, 
+                        eachData.book_title, 
+                        eachData.book_author, 
+                        eachData.book_gendre, 
+                        eachData.book_publisher, 
+                        eachData.book_isbn, 
+                        eachData.book_year, 
+                        eachData.book_price, 
+                        eachData.book_stock, 
+                        eachData.created_at, 
+                        eachData.update_at,
+                        )
+                        books.push(book);
+                });
+                console.log('result', books);
+                result(null, books);
             }
         });
     }
+
+    static showBookById(id, result) {
+        console.log(id, 'model');
+        let sqlQuery = `SELECT * FROM book WHERE book_id = ${id}`;
+        sql.query(sqlQuery, (err, res) => {
+            if(err) {
+                console.log('error', err);
+                result(err, null);
+            } else {
+                let rawData = res;
+                let books = [];
+                let book;
+                rawData.forEach(eachData => {
+                    book = new Book(
+                        eachData.book_id, 
+                        eachData.book_label, 
+                        eachData.book_title, 
+                        eachData.book_author, 
+                        eachData.book_gendre, 
+                        eachData.book_publisher, 
+                        eachData.book_isbn, 
+                        eachData.book_year, 
+                        eachData.book_price, 
+                        eachData.book_stock, 
+                        eachData.created_at, 
+                        eachData.update_at,
+                        )
+                        books.push(book);
+                });
+                console.log('result', books);
+                result(null, books);
+            }
+        });
+    }
+
+    
 }
 
 /*
@@ -46,7 +102,7 @@ class Book {
 * Update book data
 * Delete book
 */
-
+;
 /*
     * SQL Connection
     * Query sql command
@@ -54,6 +110,8 @@ class Book {
     * Change to object instance
     * send to book controller
     * */
+
+
    
 
 
